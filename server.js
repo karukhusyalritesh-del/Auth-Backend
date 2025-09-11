@@ -14,8 +14,9 @@ connectDB();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "http://localhost:5173", 
-    credentials: true}))
+    origin: ["http://localhost:5173", "https://auth-frontend-silk.vercel.app/"], 
+    credentials: true
+}))
 
 app.get("/", (req, res)=>{
     res.send("Welcome to Backend Server Of AUTH MERN APP")
